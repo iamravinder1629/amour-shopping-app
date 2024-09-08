@@ -1,0 +1,13 @@
+.list:hover {
+    color: rgb(236, 57, 87);
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #f8f9fa;
+}
+
+.achor a {
+    /* text-decoration: none; */
+    color: rgb(236, 57, 87);
+}

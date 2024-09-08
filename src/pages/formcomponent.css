@@ -1,0 +1,33 @@
+.form-background {
+    height: 100vh;
+    background-image: url("/src/assets/Form-background.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.form-container {
+    background-color: rgba(95, 92, 46, 0.382);
+    backdrop-filter: blur(3px);
+    color: white;
+}
+
+.form-control.transparent-field {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ccc !important;
+    border-radius: 0px;
+    outline: none;
+    transition: border-bottom-color 0.3s ease;
+    color: white !important;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-control:focus {
+    background-color: transparent !important;
+    outline: 0;
+    box-shadow: none !important;
+}

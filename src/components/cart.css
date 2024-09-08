@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.cart {
+    font-family: "Quicksand", sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+}
+
+.cart-button:hover {
+    color: rgb(236, 57, 87) !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    transition: 0.3s;
+    background: rgb(236, 57, 87);
+}
