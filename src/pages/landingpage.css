@@ -3,12 +3,11 @@
 .image-container {
     width: 100%;
     height: 100vh;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
     padding: 20px;
+    display: flex;
     align-items: center;
+    background-size: cover;
+    background-position: center;
 }
 
 .image1 {
@@ -36,30 +35,46 @@
 }
 
 .image5 {
-    background-image: url("../assets/w4.avif");
+    background-image: url("../assets/zara2.jpg");
     transition: opacity 0.5s ease-in-out;
     transition: 0.3s;
 }
 
-.image6 {
-    background-image: url("../assets/w6.jpg");
+.box1 {
+    background-image: url("../assets/sec-box.jpg");
     transition: opacity 0.5s ease-in-out;
     transition: 0.3s;
-}
-.image7 {
-    background-image: url("../assets/w8.jpg");
-    transition: opacity 0.5s ease-in-out;
-    transition: 0.3s;
-}
-.landing-upper {
-    height: auto;
-    border-radius: 7px;
-    color: white;
-    background-color: rgba(27, 26, 25, 0.223);
-    backdrop-filter: blur(2px);
-    padding: 100px;
 }
 
-.landing-upper h5 {
-    font-family: "Quicksand", sans-serif;
+.box2 {
+    background-image: url("../assets/sec-box2.jpg");
+    transition: opacity 0.5s ease-in-out;
+    transition: 0.3s;
+}
+
+.box3 {
+    background-image: url("../assets/sec-box3.jpg");
+    transition: opacity 0.5s ease-in-out;
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 600px) {
+    .image-container {
+        height: 60vh;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .image-container {
+        height: 40vh;
+        justify-content: center;
+        align-items: end;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .text-area {
+        display: none;
+    }
 }

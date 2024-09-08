@@ -9,6 +9,7 @@ function Layout() {
         <>
             <NavBar />
             <Cart />
+          
             <UserDetails />
             <Outlet />
             <Footer />

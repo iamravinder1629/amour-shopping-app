@@ -7,11 +7,16 @@ import { MdOutlineEmail } from "react-icons/md";
 import { MdOutlinePhone } from "react-icons/md";
 import { IoLocation } from "react-icons/io5";
 import './UserDetails.css'
+import { useNavigate } from 'react-router-dom';
 function UserDetails() {
     const show = useSelector(state => state.user.userToggle)
     const userData = useSelector(state => state.user.userData)
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
+    const goBack = () => {
+        navigate("")
+    }
 
     return (
         <>
@@ -21,14 +26,31 @@ function UserDetails() {
                         <Offcanvas.Title>My Profile <IoPerson /></Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body className='userdetail'>
-                        <h4 className='text-center'>{userData.name && (userData.name).toUpperCase()}</h4>
-                        <div className='mt-5'>
-                            <p><MdOutlineEmail /> <b>{userData.email}</b></p>
-                            <p><MdOutlinePhone /> <b>{userData.contact}</b></p>
-                            <p><IoLocation /> <b>{userData.address}</b></p>
-                        </div>
+                        {userData.name ?
+                            <div>
+                                <h4 className='text-center'>
+                                    {userData.name && (userData.name).toUpperCase()}
+                                </h4>
+                                <div className='mt-5'>
+                                    <p>{userData.email && <><MdOutlineEmail /> <b>{userData.email}</b></>}</p>
+                                    <p>{userData.contact && <><MdOutlinePhone /> <b>{userData.contact}</b></>}</p>
+                                    <p>{userData.address && <><IoLocation /> <b>{userData.address}</b></>}</p>
+                                </div>
+                                <button
+                                    onClick={goBack}
+                                    className='btn btn-outline-dark w-100 rounded-0 mt-4 mt-2'>
+                                    Edit details
+                                </button>
+                            </div> :
+                            <button
+                                onClick={goBack}
+                                className='btn btn-outline-dark w-100 rounded-0 mt-4 mt-2'>
+                                Enter details
+                            </button>
+                        }
                     </Offcanvas.Body>
                 </Offcanvas>
+
             </div>
         </>
     )

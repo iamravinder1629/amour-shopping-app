@@ -4,12 +4,14 @@ import Modal from 'react-bootstrap/Modal';
 import { PiHandbagFill } from "react-icons/pi";
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../store/cartSlice'
-
+import Loader from './Loader'
+import { showCart } from '../store/cartSlice'
 function DressCard({ item }) {
     const dispatch = useDispatch()
 
     const handleCart = (item) => {
         dispatch(addToCart(item));
+        dispatch(showCart());
     };
 
 
@@ -46,7 +48,10 @@ function DressCard({ item }) {
                 </Modal.Body>
             </Modal>
             <div className='col-lg-3 col-md-5 col-11 m-3 p-3 my-card'>
-                <img src={item.image} alt="" height={"auto"} width={'100%'} />
+                {item.image ?
+                    <img src={item.image} alt="" height={"auto"} width={'100%'} /> :
+                    <Loader />
+                }
                 <h5 className='mt-4'>{item.name}</h5>
                 <p>{item.price}$</p>
                 <div className=''>

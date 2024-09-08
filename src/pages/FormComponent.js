@@ -6,16 +6,17 @@ import './formcomponent.css'
 import { useDispatch } from 'react-redux'
 import { setUserData } from '../store/userSlice'
 function FormComponent() {
-    // const userData = useSelector(state => state.user.data);
     const dispatch = useDispatch();
     const navigate = useNavigate()
 
     const onSubmit = (values) => {
         dispatch(setUserData(values))
-        navigate("home")
+        navigate("home");
+    }
+    const handleSkip = () => {
+        navigate("home");
 
     }
-
     const initialValues = {
         name: "",
         email: "",
@@ -32,7 +33,7 @@ function FormComponent() {
     return (
         <div className='d-flex align-items-center form-background'>
             <div className="col-lg-6 col-md-8 col-sm-12 col-11 col-xs-12 m-auto p-4 form-container">
-                <h3>My login</h3>
+                <h3>Enter Details</h3>
                 <Formik
                     initialValues={initialValues}
                     validationSchema={validationSchema}
@@ -63,9 +64,16 @@ function FormComponent() {
                             {(error) => <p className='text-warning'>{error}</p>}
                         </ErrorMessage>
 
-                        <button type="submit" className=' btn btn-outline-light rounded-0 mt-4 mt-2'>
-                            Log-in
-                        </button>
+                        <div>
+                            <button type="submit" className=' btn btn-outline-light rounded-0 mt-4 mt-2'>
+                                Submit
+                            </button>
+                            <button
+                                onClick={handleSkip}
+                                className='float-end btn btn-outline-light rounded-0 mt-4 mt-2'>
+                                skip
+                            </button>
+                        </div>
                     </Form>
                 </Formik>
             </div>
