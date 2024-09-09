@@ -11,9 +11,7 @@ function LandingPage() {
         navigate("/products")
     }
 
-
-
-    const images = ["image2", "image3", "image4", "image5"];
+    const images = ["image1","image2", "image3", "image4", "image5"];
     const boxImage = ["box1", "box2", "box3"]
     const [currentIndex, setCurrentIndex] = useState(0);
     const [box, setbox] = useState(0);
@@ -49,5 +47,3 @@ function LandingPage() {
 }
 
 export default LandingPage
-
-{/* <p className='my-5'><i>"Welcome to Amour, your ultimate destination for fashion that speaks to your soul. Explore a curated collection of stylish, high-quality clothing designed to express your unique style and confidence. At Amour, we believe that fashion is more than just clothes it's a statement of who you are. Discover trends that inspire, outfits that elevate, and a shopping experience that’s as seamless as it is satisfying. Shop with Amour and fall in love with every piece."</i></p> */ }
