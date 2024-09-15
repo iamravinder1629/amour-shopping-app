@@ -47,7 +47,7 @@ function DressCard({ item }) {
 
                 </Modal.Body>
             </Modal>
-            <div className='col-lg-3 col-md-5 col-11 m-3 p-3 my-card'>
+            <div className='col-lg-3 col-md-4 col-sm-5 col-xs-5 col-10  p-3 my-4 mx-2 my-card'>
                 {item.image ?
                     <img src={item.image} alt="" height={"auto"} width={'100%'} /> :
                     <Loader />

@@ -5,7 +5,7 @@ function Dresses() {
     const dresses = useSelector(state => state.dress.dresses)
     return (
         <>
-            <div className='row m-0 d-flex justify-content-evenly'>
+            <div className='row m-0 d-flex justify-content-center'>
                 {
                     dresses.map((item) => (
                         <DressCard key={item.id} item={item} />

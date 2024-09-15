@@ -8,55 +8,10 @@
     align-items: center;
     background-size: cover;
     background-position: center;
-}
-
-.image1 {
-    background-image: url("../assets/two-womans.avif");
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease;
     transition: 0.3s;
 }
 
-.image2 {
-    background-image: url("../assets/landing-page.jpg");
-    transition: opacity 0.5s ease-in-out;
-    transition: 0.3s;
-}
-
-.image3 {
-    background-image: url("../assets/w5.jpg");
-    transition: opacity 0.5s ease-in-out;
-    transition: 0.3s;
-}
-
-.image4 {
-    background-image: url("../assets/w2.webp");
-    transition: opacity 0.5s ease-in-out;
-    transition: 0.3s;
-}
-
-.image5 {
-    background-image: url("../assets/zara2.jpg");
-    transition: opacity 0.5s ease-in-out;
-    transition: 0.3s;
-}
-
-.box1 {
-    background-image: url("../assets/sec-box.jpg");
-    transition: opacity 0.5s ease-in-out;
-    transition: 0.3s;
-}
-
-.box2 {
-    background-image: url("../assets/sec-box2.jpg");
-    transition: opacity 0.5s ease-in-out;
-    transition: 0.3s;
-}
-
-.box3 {
-    background-image: url("../assets/sec-box3.jpg");
-    transition: opacity 0.5s ease-in-out;
-    transition: 0.3s;
-}
 
 @media only screen and (max-width: 600px) {
     .image-container {
