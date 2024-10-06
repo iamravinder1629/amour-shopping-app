@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import './landingpage.css'
 import { FaShoppingBag } from "react-icons/fa";
 import { PiHandbagFill } from "react-icons/pi";
@@ -12,37 +11,9 @@ function LandingPage() {
         navigate("/products")
     }
 
-    const images = [
-        require('../assets/b1.jpg'),
-        require('../assets/b22.png'),
-        require('../assets/b6.jpg'),
-        require('../assets/b7.jpg'),
-        require('../assets/b8.jpg'),
-        require('../assets/b9.jpg'),
-    ];
-    const boxImage = [
-        require('../assets/sec-box.jpg'),
-        require('../assets/sec-box2.jpg'),
-        require('../assets/sec-box3.jpg'),
-        require('../assets/sec-box4.jpg'),
-    ]
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [box, setbox] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-            setbox((prevIndex) => (prevIndex + 1) % boxImage.length);
-        }, 3000);
-
-        return () => clearInterval(interval);
-    }, [images.length, boxImage.length]);
-
     return (
         <>
-            <div
-                style={{ backgroundImage: `url(${images[currentIndex]})` }}
-                className={`image-container image1`}>
+            <div className='image-container image-container-first image1'>
                 <div className='text-light'>
                     <h1 className='mb-3 text-area'><i>Amour <PiHandbagFill /></i></h1>
                     <p className=''>Wear Your Story</p>
@@ -55,9 +26,7 @@ function LandingPage() {
                 </div>
             </div >
             <div
-                style={{ backgroundImage: `url(${boxImage[box]})` }}
-                className="image-container">
-
+                className="image-container image-container-second">
             </div>
             <div className="row m-0">
                 <div
@@ -71,11 +40,6 @@ function LandingPage() {
 
                 </div>
             </div>
-            {/* <div
-                style={{ backgroundImage: `URL(${vertical1})` }}
-                className="image-container">
-            </div> */}
-
         </>
     )
 }

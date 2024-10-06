@@ -8,8 +8,16 @@
     align-items: center;
     background-size: cover;
     background-position: center;
-    transition: opacity 0.5s ease;
-    transition: 0.3s;
+}
+
+.image-container-first {
+    transition: background-image 0.2s ease-in-out;
+    animation: image-changer-first 16s infinite ease-in-out;
+}
+
+.image-container-second {
+    transition: background-image 0.3s ease-in-out;
+    animation: image-changer-second 10s infinite ease-in-out;
 }
 
 
@@ -31,5 +39,60 @@
 
     .text-area {
         display: none;
+    }
+}
+
+@keyframes image-changer-first {
+
+    0% {
+        background-image: url("../assets/b1.jpg");
+    }
+
+    16.67% {
+        background-image: url("../assets/b22.png");
+    }
+
+    33.33% {
+        background-image: url("../assets/b4.webp");
+    }
+
+    50% {
+        background-image: url("../assets/b7.jpg");
+    }
+
+    66.67% {
+        background-image: url("../assets/b6.jpg");
+    }
+
+    83.33% {
+        background-image: url("../assets/b8.jpg");
+    }
+
+    100% {
+        background-image: url("../assets/b1.jpg");
+    }
+}
+
+@keyframes image-changer-second {
+
+    0%,
+    20% {
+        background-image: url("../assets/sec-box.jpg");
+    }
+
+    40% {
+        background-image: url("../assets/sec-box2.jpg");
+    }
+
+    60% {
+        background-image: url("../assets/sec-box3.jpg");
+    }
+
+    80% {
+        background-image: url("../assets/sec-box4.jpg");
+    }
+
+    100% {
+        background-image: url("../assets/sec-box.jpg");
     }
 }
